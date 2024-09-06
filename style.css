@@ -1,0 +1,740 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.top-bar {
+    background-color: #f7f7f7; /* Light color */
+    padding: 3px;
+    font-size: 14px;
+    
+}
+
+.top-bar .seo-content {
+    color: #333; /* Darker color for readability */
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.top-bar marquee {
+    font-size: 16px;
+    color: #000000; /* Adding a brand color */
+}
+
+
+/* Navbar */
+/* General Reset */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Popup */
+.popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+.popup button {
+    background-color: #dacc0e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgb(234, 17, 17);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: white;
+    flex-wrap: wrap;
+}
+.container {
+    padding: 20px; /* Default padding for all screen sizes */
+    max-width: 1200px; /* Optional: Restrict max width for large screens */
+    margin: 0 auto; /* Center the container */
+}
+.logo {
+    flex: 1;
+}
+/* Set a fixed height and optional width for the carousel */
+/* Default styles for the carousel */
+.carousel {
+    width: 100%; /* Full width of the parent container */
+    max-width: 1200px; /* Maximum width of the carousel (increased from 1000px) */
+    height: 900px; /* Fixed height (increased from 600px) */
+    margin: 0 auto; /* Center the carousel horizontally */
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+    .carousel {
+        width: 100%; /* Full width of the parent container */
+        max-width: 100%; /* Maximum width of the carousel adjusted to the screen width */
+        height: 950px; /* Fixed height (adjusted from 900px) */
+        margin: 0 auto; /* Center the carousel horizontally */
+    }
+}
+
+/* Ensure images fit within the carousel */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adjust the image to cover the container without distortion */
+}
+
+/* Add border to each column */
+.col {
+    border: 2px solid black; /* Set the border width and color */
+    padding: 20px; /* Optional: Add padding to make the content more visually appealing */
+    margin: 10px; /* Optional: Add margin to separate the columns */
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+}
+  
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+}
+
+.menu ul li {
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.menu ul li a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 10px 15px; /* Adjust padding to make items closer */
+    display: block;
+    position: relative;
+}
+
+.menu ul li a::before, .menu ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover effect */
+.menu ul li a:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.menu ul li a:hover::after {
+    width: 0;
+    right: 0;
+}
+
+/* Dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(234, 17, 17) ;
+    min-width: 160px;
+    z-index: 1;
+    text-align: center;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar input {
+        width: 250px;
+    }
+}
+/* Fixed height for the carousel */
+
+/* Navbar Styles */
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: rgb(234, 17, 17);
+    color: white;
+    flex-wrap: wrap;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+}
+
+/* Show Menu on Hamburger Click */
+.show-menu .menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: rgb(234, 17, 17);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+
+.logo h1 {
+    margin: 0;
+    font-size: 24px;
+    color: white;
+}
+
+.search-bar input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 500px;
+    transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: rgb(234, 17, 17);
+    outline: none;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+}
+
+.cart i {
+    margin-right: 5px;
+}
+
+.cart span {
+    font-weight: bold;
+}
+
+.styled-heading {
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    display: inline-block;
+    color: red; /* Adjust color if needed */
+    margin-bottom: 20px; /* Adjust spacing below the heading */
+}
+
+.styled-heading::before,
+.styled-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 3px; /* Thickness of the underline */
+    background-color: rgb(234, 17, 17); /* Color of the underline */
+}
+
+.styled-heading::before {
+    width: 30%; /* First line is 80% of the heading width */
+    bottom: -10px; /* Position of the first underline */
+}
+
+.styled-heading::after {
+    width: 20%; /* Second line is 50% of the heading width */
+    bottom: -18px; /* Position of the second underline */
+}
+
+
+.style-heading {
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    display: inline-block;
+    color: red; /* Adjust color if needed */
+    margin-bottom: 20px; /* Adjust spacing below the heading */
+}
+
+.style-heading::before,
+.style-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 3px; /* Thickness of the underline */
+    background-color: rgb(234, 17, 17); /* Color of the underline */
+}
+
+.style-heading::before {
+    width: 30%; /* First line is 80% of the heading width */
+    bottom: -10px; /* Position of the first underline */
+}
+
+.style-heading::after {
+    width: 20%; /* Second line is 50% of the heading width */
+    bottom: -18px; /* Position of the second underline */
+}
+@media (max-width: 768px) {
+    .style-heading::before,
+    .style-heading::after {
+        content: none; /* Remove the underline */
+    }
+}
+
+/*home */
+.body1 {
+    margin: 0;
+    padding: 0;
+}
+.body2 {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.welcome {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.welcome h1 {
+    color: red;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.content img {
+    width: 30%;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.content .text {
+    width: 45%;
+    line-height: 1.6;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.feature {
+    text-align: center;
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.feature img {
+    width: 100px;
+    height: 100px;
+}
+
+@media (max-width: 768px) {
+    .body2 .container .welcome{
+        margin-top: 20%;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content img {
+        width: 90%;
+        margin-right: 5;
+        margin-bottom: 20px;
+    }
+    .content .text {
+        width: 90%;
+    }
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+    .feature {
+        width: 80%;
+    }
+}
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    margin: 0 auto; /* Center the grid within its container */
+}
+
+.product-card {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+    flex: 1 1 250px; /* Fixes card width to 250px for all cards */
+    max-width: 250px;
+    margin-bottom: 20px; /* Space between rows */
+    height: 350px; /* Set a fixed height for all cards */
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+}
+
+.product-card img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .product-card {
+        flex: 1 1 calc(33.33% - 40px); /* Three cards per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        flex: 1 1 calc(50% - 40px); /* Two cards per row on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        flex: 1 1 calc(100% - 40px); /* One card per row on very small screens */
+    }
+}
+
+
+
+.footer {
+    background: black;
+    border-radius: 6px;
+    width: 100%;
+    margin: auto;
+    padding: 40px 20px 8px;
+}
+
+.footer .footer-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 3.5rem;
+}
+
+.footer-col {
+    flex: 1;
+    border-bottom: 1px solid #bfbfbf;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+/* Add vertical line between columns */
+.footer-col:not(:last-child) {
+    border-right: 1px solid #bfbfbf; /* Vertical line between columns */
+    padding-right: 20px; /* Adjust spacing between the line and content */
+}
+
+/* Reset the border-right on the last column */
+.footer-col:last-child {
+    border-right: none;
+}
+
+.footer-col h4 {
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 400;   
+}
+
+.footer-col .links {
+    margin-top: 20px;
+}
+
+.footer-col .links li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.footer-col .links li a {
+    text-decoration: none;
+    color: #bfbfbf;
+}
+
+.footer-col .links li a:hover {
+    color: #fff;
+}
+
+.footer-col p {
+    margin: 20px 0;
+    color: #bfbfbf;
+    max-width: 300px;
+}
+
+.footer-col form {
+    display: flex;
+    gap: 5px;
+}
+
+.footer-col input {
+    height: 40px;
+    border-radius: 6px;
+    background: none;
+    width: 100%;
+    outline: none;
+    border: 1px solid #7489C6 ;
+    caret-color: #fff;
+    color: #fff;
+    padding-left: 10px;
+}
+
+.footer-col input::placeholder {
+    color: #ccc;
+}
+
+.footer-col form button {
+    background: #fff;
+    outline: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.footer-col form button:hover {
+    background: #cecccc;
+}
+
+.footer-col .icons {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+    cursor: pointer;
+}
+
+.footer-col .icons i {
+    color: #afb6c7;
+}
+
+.footer-col .icons i:hover {
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        width: 100%;
+        border-radius: 0;
+        padding: 20px;
+    }
+
+    .footer .footer-row {
+        gap: 1rem;
+    }
+
+    .footer-col form {
+        display: block;
+    }
+
+    .footer-col form :where(input, button) {
+        width: 100%;
+    }
+
+    .footer-col form button {
+        margin: 10px 0 0 0;
+    }
+
+    /* Remove vertical line on mobile view */
+    .footer-col {
+        border-right: none;
+        padding-right: 0; /* Remove padding right */
+    }
+}
+
+
+  .about-seo-content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-seo-content:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.about-seo-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: rgb(234, 17, 17); /* Custom heading color */
+    font-weight: bold;
+}
+
+.about-seo-content ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 20px 0;
+}
+
+.about-seo-content ul li {
+    font-size: 1.1em;
+    padding: 10px 0;
+    position: relative;
+    padding-left: 30px;
+    color: #555;
+}
+
+.about-seo-content ul li::before {
+    content: "✔";
+    color: rgb(234, 17, 17);
+    font-size: 1.3em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.about-seo-content p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    margin-top: 20px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .about-seo-content {
+        padding: 15px;
+    }
+
+    .about-seo-content h3 {
+        font-size: 1.5em;
+    }
+
+    .about-seo-content ul li {
+        font-size: 1em;
+    }
+
+    .about-seo-content p {
+        font-size: 1em;
+    }
+}
+
+.about-seo-content ul li {
+    font-size: 1.1em;
+    padding: 10px 0;
+    position: relative;
+    padding-left: 30px;
+    color: #555;
+}
+
+.about-seo-content ul li::before {
+    content: "✔";
+    color: rgb(234, 17, 17);
+    font-size: 1.3em;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.about-seo-content p {
+    font-size: 1.1em;
+    line-height: 1.6em;
+    margin-top: 20px;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .about-seo-content {
+        padding: 15px;
+    }
+
+    .about-seo-content h3 {
+        font-size: 1.5em;
+    }
+
+    .about-seo-content ul li {
+        font-size: 1em;
+    }
+
+    .about-seo-content p {
+        font-size: 1em;
+    }
+}
